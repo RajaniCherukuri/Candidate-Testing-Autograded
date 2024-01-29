@@ -47,11 +47,11 @@ function gradeQuiz(candidateAnswers) {
   let score = 0;
   let status ;
     for(let i = 0;i < candidateAnswers.length;i++){
-    if (String(candidateAnswers[i].toUpperCase()) === String(correctAnswers[i].toUpperCase())){
+    if(candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
       score++;
   }  
 }
-    grade = (score/5)*100;
+    grade = score/questions.length*100;
   if (grade >= 80){
     status = "Passed"
   }else{
